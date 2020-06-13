@@ -1,0 +1,9 @@
+.App {
+  text-align: center;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  /* overflow: hidden; */
+}
+

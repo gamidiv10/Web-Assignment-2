@@ -1,0 +1,37 @@
+.login-container{
+    /* height: 90vh; */
+    margin-top: 5%; 
+    margin-bottom: 5%;
+}
+
+.form-container{
+    margin: 0 auto;
+    width: 60%;
+}
+.input-element{
+    width: 50%;
+}
+.login-div{
+    background: url('../images/2.jpg') center no-repeat fixed;
+    width: 100%;
+}
+
+.login-form{
+    padding: 5%;
+    background: #292b2c;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+.login-form h3{
+    text-align: center;
+    color: #fff;
+}
+.form-group{
+    margin: 0 auto;
+}
+.login-container form{
+    padding: 5%;
+}
+.login-form .forgot-password, .error{
+    color: #fff;
+    font-weight: 600;
+}

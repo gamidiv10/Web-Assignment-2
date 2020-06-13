@@ -1,0 +1,32 @@
+.people-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 5%;
+}
+.people-div{
+    background: url('../images/2.jpg') center no-repeat fixed;
+}
+.delete-img{
+    width: 20px;
+    height: 20px;
+}
+.delete-span{   
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    right: 15px;
+}
+.people-container .card{
+    margin-left: 10px;
+    width: 12rem; 
+    height: 15rem;
+}
+.people-container .card-body{
+    margin-top: 80px;
+}
+.img-div{
+    width: auto;
+    height: 70px;
+}

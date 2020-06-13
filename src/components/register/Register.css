@@ -1,0 +1,37 @@
+.register-container{
+    height: 90vh;
+    margin-top: 5%; 
+    margin-bottom: 5%;
+}
+.form-container{
+    margin: 0 auto;
+    width: 60%;
+}
+.form-group{
+    margin: 0 auto;
+}
+.input-element{
+    width: 50%;
+}
+.register-div{
+    background: url('../images/2.jpg') center no-repeat fixed;
+    overflow: hidden;
+    height: 100%;
+}
+.register-form{
+    padding: 5%;
+    background: #292b2c;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+.register-form h3{
+    text-align: center;
+    color: #fff;
+}
+.register-container form{
+    padding: 5%;
+}
+.register-form .forgot-password, .error{
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}

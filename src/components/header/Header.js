@@ -1,8 +1,26 @@
 import React from "react";
 import "./Header.css";
+import {useHistory} from 'react-router-dom';
 // import registerLogo from '../images/10.jpg'
 
 export const Header = () => {
+  const history = useHistory();
+  const handleLogin = (e) => {
+    e.preventDefault();
+    history.push('/login')
+  }
+  const handleRegister = (e) => {
+    e.preventDefault();
+    history.push('/register')
+  }
+  const handleAbout = (e) => {
+    e.preventDefault();
+    history.push('/about')
+  }
+  const handleContactUs = (e) => {
+    e.preventDefault();
+    history.push('/contactUs')
+  }
   return (
      <nav className="navbar navbar-expand-sm bg-dark navbar-dark">
       <form className="form-inline" action="/register">
@@ -12,10 +30,10 @@ export const Header = () => {
           </a>
         </div>
         <div className="form-group">
-          <button className="btn btn-dark login-btn">Login</button>
+          <button className="btn btn-dark login-btn" onClick={handleLogin}>Login</button>
         </div>
         <div className="form-group register-btn">
-          <button className="btn btn-dark">
+          <button className="btn btn-dark" onClick={handleRegister}>
             {/* <span>
           <img className="register-logo" src={registerLogo} alt="img"></img>
             </span>  */}
@@ -34,10 +52,10 @@ export const Header = () => {
           </div> */}
 
           <div className="form-group">
-          <button className="btn btn-dark login-btn">About</button>
+          <button className="btn btn-dark login-btn" onClick={handleAbout}>About</button>
         </div>
         <div className="form-group">
-          <button className="btn btn-dark login-btn">Contact Us</button>
+          <button className="btn btn-dark login-btn" onClick={handleContactUs}>Contact Us</button>
         </div>
 
       </form>

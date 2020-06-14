@@ -1,18 +1,50 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { HomeHeader } from "../home_header/HomeHeader";
 import "./People.css";
 import registerLogo from "../images/11.jpg";
 import deleteLogo from "../images/9.jpg";
 
 export const People = () => {
-  const test = [1, 2, 3, 4, 5, 6];
-
+  const [people, setPeople] = useState([]);
+  useEffect(() => {
+    setPeople([{
+      "key": "VG",
+      "title": "Web Developer",
+      "name": "Vamsi Gamidi"
+      
+    },
+    {
+      "key": "TO",
+      "title": "Front-end Developer",
+      "name": "Thor Odinson"
+    },
+    {
+      "key": "SR",
+      "title": "Back-end Developer",
+      "name": "Steve Rogers"
+    },
+    {
+      "key": "TS",
+      "title": "Web Developer",
+      "name": "Tony Stark"
+    },
+    {
+      "key": "TC",
+      "title": "Backend Developer",
+      "name": "Tom Cruise"
+    },
+    {
+      "key": "BP",
+      "title": "Front-end Developer",
+      "name": "Brad Pitt"
+    }])
+  }, []);
   return (
     <div className="people-div">
       <HomeHeader />
       <div className="container people-container">
-        {test.map((item) => (
-          <div className="card text-white bg-dark mb-3">
+        {people.map((item) => (
+          <div key={item.key} className="card text-white bg-dark mb-3">
               <span className="delete-span">
                   <img className="delete-img" src={deleteLogo} alt="delete"></img>
               </span>
@@ -22,8 +54,8 @@ export const People = () => {
             </div>
             {/* <div className="card-header">Taskatic</div> */}
             <div className="card-body">
-              <h5 className="card-title">Vamsi Gamidi</h5>
-              <p className="card-text">Web Developer</p>
+        <h5 className="card-title">{item.name}</h5>
+        <p className="card-text">{item.title}</p>
               <a href="/project" className="stretched-link"> </a>
             </div>
           </div>

@@ -7,6 +7,7 @@
 }
 .home-div{
     background: url('../images/2.jpg') center no-repeat fixed;
+    height: 100%;
 }
 .card{
     margin-left: 10px;
@@ -15,4 +16,7 @@
 .card-header{
     background-color: #292b2c !important;
     color: white;
+}
+.create-card{
+    margin-top: 18%;
 }

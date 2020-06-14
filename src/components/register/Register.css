@@ -1,5 +1,4 @@
 .register-container{
-    height: 90vh;
     margin-top: 5%; 
     margin-bottom: 5%;
 }
@@ -15,8 +14,8 @@
 }
 .register-div{
     background: url('../images/2.jpg') center no-repeat fixed;
-    overflow: hidden;
     height: 100%;
+
 }
 .register-form{
     padding: 5%;

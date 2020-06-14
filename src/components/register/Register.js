@@ -37,10 +37,10 @@ export const Register = () => {
             history.push('/login')
         }
         if(!validEmailRegex.test(email)){
-        setError(errorMsg.push("Please Enter Email ID"))
+        setError(["Please Enter a Valid Email ID"]);
         }
         if(!validEmailRegex.test(pwd)){
-        setError(errorMsg.push("Please Enter Valid Password")) 
+        setError([...errorMsg, "Please Enter Valid Password"]);
         }
     }
 
@@ -72,7 +72,7 @@ export const Register = () => {
                             <a href="/login" className="forgot-password">Already have an account?</a>
                         </div>
                         {errorMsg.map((msg) => (
-                            <div className="form-group">
+                            <div key={Math.random()} className="form-group">
                             <p className="error">{msg}</p>
                             </div>
                         ))}

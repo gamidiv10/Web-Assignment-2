@@ -20,6 +20,26 @@ export const Home = () => {
         "key": "AWS",
         "projectName": "Amazon Web Services",
         "manager": "Jeff Bezos"
+      },
+      {
+        "key": "HCS",
+        "projectName": "Health Care System",
+        "manager": "Vamsi Gamidi"
+      },
+      {
+        "key": "HT",
+        "projectName": "Halifax Transit",
+        "manager": "Tom Cruise"
+      },
+      {
+        "key": "TRM",
+        "projectName": "Tourism",
+        "manager": "Brad Pitt"
+      },
+      {
+        "key": "RS",
+        "projectName": "Rental System",
+        "manager": "Bradley Cooper"
       }])
     }, []);
     
@@ -39,7 +59,7 @@ export const Home = () => {
             </div>
             ))}
             <div className="card text-white bg-secondary mb-3">
-            <div className="card-body">
+            <div className="card-body create-card">
                 <h5>Create New Project</h5>
                 <a href="/project" className="stretched-link"> </a>
             </div>

@@ -10,6 +10,7 @@ import {ResetPassword} from './components/reset_password/ResetPassword'
 function App() {
   return (
     <div className="App">
+      
       <Router>
         <Switch>
         <Route path="/register" component={Register}/>

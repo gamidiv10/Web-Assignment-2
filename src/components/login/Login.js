@@ -37,7 +37,8 @@ export const Login = () => {
         if(!validEmailRegex.test(pwd))
         {
         setError(errorMsg.push("Please Enter Valid Password"))
-        }
+    }
+        console.log(typeof(errorMsg), errorMsg)
     }
 
     return (
@@ -63,11 +64,11 @@ export const Login = () => {
                         <div className="form-group">
                             <a href="/register" className="forgot-password">Don't have an account?</a>
                         </div>
-                        {errorMsg.map((msg) => (
+                        {errorMsg.length ? errorMsg.map((msg) => (
                         <div className="form-group">
-                            <div className="error">{msg}</div>
+                            <p className="error">{msg}</p>
                         </div>
-                        ))}
+                        )) : null}
                     
                     </form>
                 </div>

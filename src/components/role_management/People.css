@@ -7,6 +7,7 @@
 }
 .people-div{
     background: url('../images/2.jpg') center no-repeat fixed;
+    height: 100%;
 }
 .delete-img{
     width: 20px;

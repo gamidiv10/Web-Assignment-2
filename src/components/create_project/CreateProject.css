@@ -1,4 +1,4 @@
-.register-container{
+.create-project-container{
     margin-top: 5%; 
     margin-bottom: 5%;
 }
@@ -12,28 +12,34 @@
 .input-element{
     width: 50%;
 }
-.register-section{
+.create-project-section{
     background: url('../images/2.jpg') center no-repeat fixed;
     height: 100%;
 
 }
-.register-form{
+.create-project-form{
     padding: 5%;
     background: #292b2c;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
 }
-.register-form h3{
+.create-project-form h3{
     text-align: center;
     color: #fff;
 }
-.register-container form{
+.create-project-container form{
     padding: 5%;
 }
-.register-form .forgot-password{
+.create-project-form .forgot-password{
     color: #fff;
     font-weight: 600;
 }
 .error{
-    color: #74230D;
+    color: maroon;
     font-weight: 600;
 }
+.managerDropDown{
+    background-color: #fff;
+    padding: 1%;
+    border-radius: 20;
+}
+

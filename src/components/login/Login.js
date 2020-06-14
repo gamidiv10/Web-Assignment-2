@@ -7,10 +7,11 @@ export const Login = () => {
 
     const [email, setEmail] = useState("");
     const [pwd, setPwd] = useState("");
-    const [errorMsg, setError] = useState([]);
-    const validEmailRegex = 
+    const [emailError, setEmailError] = useState("");
+    const [pwdError, setPwdError] = useState("");
+    const EmailRegex = 
         RegExp(/^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i);
-    const validatePwdRegex = 
+    const PwdRegex = 
         new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&*])(?=.{8,})");
 
 
@@ -26,19 +27,20 @@ export const Login = () => {
     }
     const handleLoginClick = (e) => {
         e.preventDefault();
-        if(validEmailRegex.test(email) && validatePwdRegex.test(pwd))
+        if(EmailRegex.test(email) && PwdRegex.test(pwd))
         {
+            setEmailError("")
+            setPwdError("")
             history.push('/home')
         }
-        if(!validatePwdRegex.test(email))
+        if(!PwdRegex.test(email))
         {
-        setError([errorMsg.push("Please Enter Email ID")])
+        setEmailError("Please Enter Email ID");
         }
-        if(!validEmailRegex.test(pwd))
+        if(!EmailRegex.test(pwd))
         {
-        setError([errorMsg.push("Please Enter Valid Password")])
+        setPwdError("Please Enter Valid Password: Atleast 1 Upper Case, 1 Lower Case, 1 Numeric, 1 Special Symbol");
     }
-        console.log(typeof(errorMsg), errorMsg)
     }
 
     return (
@@ -64,12 +66,10 @@ export const Login = () => {
                         <section className="form-group">
                             <a href="/register" className="forgot-password">Don't have an account?</a>
                         </section>
-                        {errorMsg.map((msg) => (
                         <section className="form-group">
-                            <p className="error">{msg}</p>
-                        </section>
-                        ))}
-                    
+                            <p className="error">{emailError}</p>
+                            <p className="error">{pwdError}</p>
+                        </section>                    
                     </form>
                 </section>
             </section>

@@ -52,7 +52,6 @@ export const People = () => {
               <img className="card-img-top" src={registerLogo} alt="img">
               </img>
             </section>
-            {/* <section className="card-header">Taskatic</section> */}
             <section className="card-body">
         <h5 className="card-title">{item.name}</h5>
         <p className="card-text">{item.title}</p>

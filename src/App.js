@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import {Home} from './components/home/Home'
 import {People} from './components/role_management/People'
 import {ResetPassword} from './components/reset_password/ResetPassword'
+import { CreateProject } from './components/create_project/CreateProject';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/home" component={Home}/>
         <Route path="/resetPassword" component={ResetPassword}/>
         <Route path="/people" component={People}/>
+        <Route path="/createProject" component={CreateProject}/>
 
       </Switch>
       </Router>

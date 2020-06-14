@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import './Register.css'
 import {Header} from '../header/Header'
 import {useHistory} from 'react-router-dom'
@@ -6,14 +6,12 @@ import {useHistory} from 'react-router-dom'
 export const Register = () => {
     const [email, setEmail] = useState("");
     const [pwd, setPwd] = useState("");
-    const [errorMsg, setError] = useState([]);
-    const validEmailRegex = 
+    const [emailError, setEmailError] = useState("");
+    const [pwdError, setPwdError] = useState("");    
+    const EmailRegex = 
         RegExp(/^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i);
-    const validatePwdRegex = 
+    const PwdRegex = 
         new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&*])(?=.{8,})");
-    useEffect(() => {
-        console.log("Use Effect", errorMsg)
-      }, [errorMsg]);
 
     const history = useHistory();
     const handleFirstName = (e) => {
@@ -35,19 +33,18 @@ export const Register = () => {
     }
     const handleSubmit = (e) => {
         e.preventDefault();
-        if(validEmailRegex.test(email) && validatePwdRegex.test(pwd)){
+        if(EmailRegex.test(email) && PwdRegex.test(pwd)){
+            setPwdError("")
+            setEmailError("")
             history.push('/login')
         }
-        if(!validatePwdRegex.test(pwd)){
-            setError([errorMsg.push("Please Enter Valid Password")]);
-            }
-        if(!validEmailRegex.test(email)){
-        setError([errorMsg.push("Please Enter a Valid Email ID")]);
+        if(!PwdRegex.test(pwd)){
+            setPwdError("Please Enter Valid Password: Atleast 1 Upper Case, 1 Lower Case, 1 Numeric, 1 Special Symbol");
         }
-        errorMsg.map((item) => console.log(item));
+        if(!EmailRegex.test(email)){
+            setEmailError("Please Enter Email ID");
+        }
     }
-
-
     return (
         <section className="register-section">
         <Header/>
@@ -74,11 +71,10 @@ export const Register = () => {
                         <section className="form-group">
                             <a href="/login" className="forgot-password">Already have an account?</a>
                         </section>
-                        {errorMsg.map((item) => (
-                            // <section key={Math.random()} className="form-group">
-                            <section key={Math.random()} className="error">{item}</section>
-                            // </section>
-                        ))}
+                        <section className="form-group">
+                            <p className="error">{emailError}</p>
+                            <p className="error">{pwdError}</p>
+                        </section>   
                     </form>
                 </section>
             </section>

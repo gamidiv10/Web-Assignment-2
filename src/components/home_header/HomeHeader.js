@@ -63,16 +63,6 @@ export const HomeHeader = () => {
         <section className="form-group">
           <button className="btn btn-dark" onClick={handleBacklog}>Backlog</button>
         </section>
-        {/* <section className="form-group" style={{ marginLeft: "50px" }}>
-          <input
-            className="form-control mr-sm-2"
-            type="text"
-            placeholder="Search"
-          />
-          <button className="btn btn-success" type="submit">
-            Search
-          </button>
-          </section> */}
           <section className="form-group">
           <button className="btn btn-dark" onClick={handleAbout}>About</button>
         </section>

@@ -13,13 +13,13 @@ export const Home = () => {
       },
       {
         "key": "GC",
-        "projectName": "Google Chrome",
-        "manager": "Sundar Pichai"
+        "projectName": "Star Sports",
+        "manager": "Tony Stark"
       },
       {
-        "key": "AWS",
-        "projectName": "Amazon Web Services",
-        "manager": "Jeff Bezos"
+        "key": "HWS",
+        "projectName": "Halifax Web Services",
+        "manager": "Steve Rogers"
       },
       {
         "key": "HCS",
@@ -29,17 +29,17 @@ export const Home = () => {
       {
         "key": "HT",
         "projectName": "Halifax Transit",
-        "manager": "Tom Cruise"
+        "manager": "Bruce Wayne"
       },
       {
         "key": "TRM",
         "projectName": "Tourism",
-        "manager": "Brad Pitt"
+        "manager": "Clark Kent"
       },
       {
         "key": "RS",
         "projectName": "Rental System",
-        "manager": "Bradley Cooper"
+        "manager": "Bruce Banner"
       }])
     }, []);
     

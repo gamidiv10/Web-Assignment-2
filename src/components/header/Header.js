@@ -33,24 +33,8 @@ export const Header = () => {
           <button className="btn btn-dark login-btn" onClick={handleLogin}>Login</button>
         </section>
         <section className="form-group register-btn">
-          <button className="btn btn-dark" onClick={handleRegister}>
-            {/* <span>
-          <img className="register-logo" src={registerLogo} alt="img"></img>
-            </span>  */}
-            Register</button>
+          <button className="btn btn-dark" onClick={handleRegister}>Register</button>
         </section>
-
-        {/* <section className="form-group" style={{ marginLeft: "50px" }}>
-          <input
-            className="form-control mr-sm-2"
-            type="text"
-            placeholder="Search"
-          />
-          <button className="btn btn-success" type="submit">
-            Search
-          </button>
-          </section> */}
-
           <section className="form-group">
           <button className="btn btn-dark login-btn" onClick={handleAbout}>About</button>
         </section>

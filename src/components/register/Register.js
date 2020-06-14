@@ -69,7 +69,7 @@ export const Register = () => {
                             <button className="btn btn-success" type="submit"  onClick={handleSubmit}>Register</button>
                         </section>
                         <section className="form-group">
-                            <a href="/login" className="forgot-password">Already have an account?</a>
+                            <a href="/login">Already have an account?</a>
                         </section>
                         <section className="form-group">
                             <p className="error">{emailError}</p>

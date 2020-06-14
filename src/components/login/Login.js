@@ -61,10 +61,10 @@ export const Login = () => {
                             <button className="btn btn-success" onClick={handleLoginClick} type="submit">Login</button>
                         </section>
                         <section className="form-group">
-                            <a href="/resetPassword" className="forgot-password">Forget Password?</a>
+                            <a href="/resetPassword">Forget Password?</a>
                         </section>
                         <section className="form-group">
-                            <a href="/register" className="forgot-password">Don't have an account?</a>
+                            <a href="/register">Don't have an account?</a>
                         </section>
                         <section className="form-group">
                             <p className="error">{emailError}</p>

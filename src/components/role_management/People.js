@@ -39,6 +39,11 @@ export const People = () => {
       "name": "Brad Pitt"
     }])
   }, []);
+
+  const handleDeleteUser = (e) => {
+    console.log(e.target)
+    setPeople(people.filter(user => user.name === e.currentTarget))
+  }
   return (
     <section className="people-section">
       <HomeHeader />
@@ -46,7 +51,7 @@ export const People = () => {
         {people.map((item) => (
           <section key={item.key} className="card text-white bg-dark mb-3">
               <span className="delete-span">
-                  <img className="delete-img" src={deleteLogo} alt="delete"></img>
+                  <img className="delete-img" src={deleteLogo} onClick={handleDeleteUser} alt="delete"></img>
               </span>
             <section className="img-section">
               <img className="card-img-top" src={registerLogo} alt="img">
@@ -65,7 +70,7 @@ export const People = () => {
           </section>
           <section className="card-body">
             <h5>Add a new user to the project</h5>
-            <a href="/project" className="stretched-link"> </a>
+            <a href="/addUser" className="stretched-link"> </a>
           </section>
         </section>
       </section>

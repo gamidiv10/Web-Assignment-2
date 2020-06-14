@@ -1,5 +1,4 @@
 .login-container{
-    /* height: 90vh; */
     margin-top: 5%; 
     margin-bottom: 5%;
 }
@@ -28,6 +27,7 @@
 }
 .form-group{
     margin: 0 auto;
+    margin-bottom: 1 rem;
 }
 .login-container form{
     padding: 5%;

@@ -30,51 +30,51 @@ export const Login = () => {
         {
             history.push('/home')
         }
-        if(!validEmailRegex.test(email))
+        if(!validatePwdRegex.test(email))
         {
-        setError(errorMsg.push("Please Enter Email ID"))
+        setError([errorMsg.push("Please Enter Email ID")])
         }
         if(!validEmailRegex.test(pwd))
         {
-        setError(errorMsg.push("Please Enter Valid Password"))
+        setError([errorMsg.push("Please Enter Valid Password")])
     }
         console.log(typeof(errorMsg), errorMsg)
     }
 
     return (
-        <div className="login-div">
+        <section className="login-section">
         <Header/>
-        <div className="container login-container">
-            <div className="form-container">
-                <div className="login-form">
+        <section className="container login-container">
+            <section className="form-container">
+                <section className="login-form">
                     <h3>Taskatic Login</h3>
                     <form>
-                        <div className="form-group input-element">
+                        <section className="form-group input-element">
                             <input type="text" className="form-control" onChange={handleEmail} placeholder="Email ID" required/>
-                        </div>
-                        <div className="form-group input-element">
+                        </section>
+                        <section className="form-group input-element">
                             <input type="password" className="form-control" onChange={handlePwd} placeholder="Password" required/>
-                        </div>
-                        <div className="form-group">
+                        </section>
+                        <section className="form-group">
                             <button className="btn btn-success" onClick={handleLoginClick} type="submit">Login</button>
-                        </div>
-                        <div className="form-group">
+                        </section>
+                        <section className="form-group">
                             <a href="/resetPassword" className="forgot-password">Forget Password?</a>
-                        </div>
-                        <div className="form-group">
+                        </section>
+                        <section className="form-group">
                             <a href="/register" className="forgot-password">Don't have an account?</a>
-                        </div>
-                        {errorMsg.length ? errorMsg.map((msg) => (
-                        <div className="form-group">
+                        </section>
+                        {errorMsg.map((msg) => (
+                        <section className="form-group">
                             <p className="error">{msg}</p>
-                        </div>
-                        )) : null}
+                        </section>
+                        ))}
                     
                     </form>
-                </div>
-            </div>
-        </div>
-        </div>
+                </section>
+            </section>
+        </section>
+        </section>
     )
 }
 

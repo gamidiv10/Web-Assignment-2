@@ -39,31 +39,31 @@ export const HomeHeader = () => {
   return (
      <nav className="navbar navbar-expand-sm bg-dark navbar-dark">
       <form className="form-inline" action="/register">
-        <div className="form-group" style={{marginLeft: "10px"}}>
+        <section className="form-group" style={{marginLeft: "10px"}}>
           <a className="navbar-brand" href="/home">
             Taskatic
           </a>
-        </div>
-        <div className="form-group">
+        </section>
+        <section className="form-group">
           <button className="btn btn-dark" onClick={handleLogin}>Login</button>
-        </div>
+        </section>
 
-        <div className="form-group">
+        <section className="form-group">
           <button className="btn btn-dark" onClick={handleRegister}>Register</button>
-        </div>
-        <div className="form-group">
+        </section>
+        <section className="form-group">
           <button className="btn btn-dark" onClick={handlePeople}>People</button>
-        </div>
-        <div className="form-group">
+        </section>
+        <section className="form-group">
           <button className="btn btn-dark" onClick={handleCalendar}>Calendar</button>
-        </div>
-        <div className="form-group">
+        </section>
+        <section className="form-group">
           <button className="btn btn-dark" onClick={handleReports}>Reports</button>
-        </div>
-        <div className="form-group">
+        </section>
+        <section className="form-group">
           <button className="btn btn-dark" onClick={handleBacklog}>Backlog</button>
-        </div>
-        {/* <div className="form-group" style={{ marginLeft: "50px" }}>
+        </section>
+        {/* <section className="form-group" style={{ marginLeft: "50px" }}>
           <input
             className="form-control mr-sm-2"
             type="text"
@@ -72,13 +72,13 @@ export const HomeHeader = () => {
           <button className="btn btn-success" type="submit">
             Search
           </button>
-          </div> */}
-          <div className="form-group">
+          </section> */}
+          <section className="form-group">
           <button className="btn btn-dark" onClick={handleAbout}>About</button>
-        </div>
-        <div className="form-group">
+        </section>
+        <section className="form-group">
           <button className="btn btn-dark" onClick={handleContactUs}>Contact Us</button>
-        </div>
+        </section>
 
       </form>
     </nav>

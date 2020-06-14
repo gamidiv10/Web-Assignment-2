@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import './Register.css'
 import {Header} from '../header/Header'
 import {useHistory} from 'react-router-dom'
@@ -11,7 +11,9 @@ export const Register = () => {
         RegExp(/^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i);
     const validatePwdRegex = 
         new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&*])(?=.{8,})");
-
+    useEffect(() => {
+        console.log("Use Effect", errorMsg)
+      }, [errorMsg]);
 
     const history = useHistory();
     const handleFirstName = (e) => {
@@ -36,52 +38,52 @@ export const Register = () => {
         if(validEmailRegex.test(email) && validatePwdRegex.test(pwd)){
             history.push('/login')
         }
+        if(!validatePwdRegex.test(pwd)){
+            setError([errorMsg.push("Please Enter Valid Password")]);
+            }
         if(!validEmailRegex.test(email)){
-        setError(["Please Enter a Valid Email ID"]);
+        setError([errorMsg.push("Please Enter a Valid Email ID")]);
         }
-        if(!validEmailRegex.test(pwd)){
-        setError([...errorMsg, "Please Enter Valid Password"]);
-        }
+        errorMsg.map((item) => console.log(item));
     }
 
 
     return (
-        <div className="register-div">
+        <section className="register-section">
         <Header/>
-        <div className="container register-container">
-            <div className="form-container">
-                <div className="register-form">
+        <section className="container register-container">
+            <section className="form-container">
+                <section className="register-form">
                     <h3>Taskatic Registration</h3>
                     <form>
-                        <div className="form-group input-element">
+                        <section className="form-group input-element">
                             <input type="text" className="form-control"  onChange={handleFirstName} placeholder="First Name" required/>
-                        </div>
-                        <div className="form-group input-element">
+                        </section>
+                        <section className="form-group input-element">
                             <input type="text" className="form-control"  onChange={handleLastName} placeholder="Last Name" required/>
-                        </div>
-                        <div className="form-group input-element">
+                        </section>
+                        <section className="form-group input-element">
                             <input type="text" className="form-control"  onChange={handleEmail} placeholder="Email ID" required/>
-                        </div>
-                        <div className="form-group input-element">
+                        </section>
+                        <section className="form-group input-element">
                             <input type="password" className="form-control" onChange={handlePwd} placeholder="Password" required/>
-                        </div>
-                        <div className="form-group">
+                        </section>
+                        <section className="form-group">
                             <button className="btn btn-success" type="submit"  onClick={handleSubmit}>Register</button>
-                        </div>
-                        <div className="form-group">
+                        </section>
+                        <section className="form-group">
                             <a href="/login" className="forgot-password">Already have an account?</a>
-                        </div>
-                        {errorMsg.map((msg) => (
-                            <div key={Math.random()} className="form-group">
-                            <p className="error">{msg}</p>
-                            </div>
+                        </section>
+                        {errorMsg.map((item) => (
+                            // <section key={Math.random()} className="form-group">
+                            <section key={Math.random()} className="error">{item}</section>
+                            // </section>
                         ))}
-                      
                     </form>
-                </div>
-            </div>
-        </div>
-        </div>
+                </section>
+            </section>
+        </section>
+        </section>
     )
 }
 

@@ -5,38 +5,38 @@ import {Header} from '../header/Header'
 export const ResetPassword = () => {
 
     return (
-        <div className="reset-pwd-div">
+        <section className="reset-pwd-section">
         <Header/>
-        <div className="container reset-pwd-container">
-            <div className="form-container">
-                <div className="reset-pwd-form">
-                <div className="form-group">
+        <section className="container reset-pwd-container">
+            <section className="form-container">
+                <section className="reset-pwd-form">
+                <section className="form-group">
                     <h3>Password Reset</h3>
-                    </div>
+                    </section>
                     <form>
-                        <div className="form-group input-element">
+                        <section className="form-group input-element">
                             <input type="text" className="form-control" placeholder="Email ID"/>
-                        </div>
-                        <div className="form-group input-element">
+                        </section>
+                        <section className="form-group input-element">
                             <input type="password" className="form-control" placeholder="Old Password"/>
-                        </div>
-                        <div className="form-group input-element">
+                        </section>
+                        <section className="form-group input-element">
                             <input type="password" className="form-control" placeholder="New Password"/>
-                        </div>
-                        <div className="form-group input-element">
+                        </section>
+                        <section className="form-group input-element">
                             <input type="password" className="form-control" placeholder="Re-Enter New Password"/>
-                        </div>
-                        <div className="form-group">
+                        </section>
+                        <section className="form-group">
                             <button className="btn btn-success" type="submit">Reset</button>
-                        </div>
-                        <div className="form-group">
+                        </section>
+                        <section className="form-group">
                             <a href="/login" className="forgot-password" value="reset-pwd">Don't want to Reset? Login</a>
-                        </div>
+                        </section>
                     </form>
-                </div>
-            </div>
-        </div>
-        </div>
+                </section>
+            </section>
+        </section>
+        </section>
     )
 }
 

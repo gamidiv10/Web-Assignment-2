@@ -40,36 +40,36 @@ export const People = () => {
     }])
   }, []);
   return (
-    <div className="people-div">
+    <section className="people-section">
       <HomeHeader />
-      <div className="container people-container">
+      <section className="container people-container">
         {people.map((item) => (
-          <div key={item.key} className="card text-white bg-dark mb-3">
+          <section key={item.key} className="card text-white bg-dark mb-3">
               <span className="delete-span">
                   <img className="delete-img" src={deleteLogo} alt="delete"></img>
               </span>
-            <div className="img-div">
+            <section className="img-section">
               <img className="card-img-top" src={registerLogo} alt="img">
               </img>
-            </div>
-            {/* <div className="card-header">Taskatic</div> */}
-            <div className="card-body">
+            </section>
+            {/* <section className="card-header">Taskatic</section> */}
+            <section className="card-body">
         <h5 className="card-title">{item.name}</h5>
         <p className="card-text">{item.title}</p>
               <a href="/project" className="stretched-link"> </a>
-            </div>
-          </div>
+            </section>
+          </section>
         ))}
-        <div className="card text-white bg-secondary mb-3">
-          <div className="img-div">
+        <section className="card text-white bg-secondary mb-3">
+          <section className="img-section">
             <img className="card-img-top" src={registerLogo} alt="img"></img>
-          </div>
-          <div className="card-body">
+          </section>
+          <section className="card-body">
             <h5>Add a new user to the project</h5>
             <a href="/project" className="stretched-link"> </a>
-          </div>
-        </div>
-      </div>
-    </div>
+          </section>
+        </section>
+      </section>
+    </section>
   );
 };

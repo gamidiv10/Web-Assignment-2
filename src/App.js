@@ -9,7 +9,7 @@ import {ResetPassword} from './components/reset_password/ResetPassword'
 
 function App() {
   return (
-    <div className="App">
+    <section className="App">
       
       <Router>
         <Switch>
@@ -21,7 +21,7 @@ function App() {
 
       </Switch>
       </Router>
-    </div>
+    </section>
   );
 }
 

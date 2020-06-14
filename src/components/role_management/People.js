@@ -40,9 +40,8 @@ export const People = () => {
     }])
   }, []);
 
-  const handleDeleteUser = (e) => {
-    console.log(e.target)
-    setPeople(people.filter(user => user.name === e.currentTarget))
+  const handleDeleteUser = (key) => {
+    setPeople(people.filter(user => user.key !== key))
   }
   return (
     <section className="people-section">
@@ -51,7 +50,7 @@ export const People = () => {
         {people.map((item) => (
           <section key={item.key} className="card text-white bg-dark mb-3">
               <span className="delete-span">
-                  <img className="delete-img" src={deleteLogo} onClick={handleDeleteUser} alt="delete"></img>
+                  <img className="delete-img" src={deleteLogo} onClick={() => handleDeleteUser(item.key)} alt="delete"></img>
               </span>
             <section className="img-section">
               <img className="card-img-top" src={registerLogo} alt="img">
@@ -60,7 +59,6 @@ export const People = () => {
             <section className="card-body">
         <h5 className="card-title">{item.name}</h5>
         <p className="card-text">{item.title}</p>
-              <a href="/project" className="stretched-link"> </a>
             </section>
           </section>
         ))}

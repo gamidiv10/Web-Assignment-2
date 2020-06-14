@@ -14,17 +14,8 @@ export const Login = () => {
     const PwdRegex = 
         new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&*])(?=.{8,})");
 
-
     const history = useHistory();
-    const handleEmail = (e) => {
-        e.preventDefault();
-        setEmail(e.target.value);        
-    }
-    const handlePwd = (e) => {
-        e.preventDefault();
-        setPwd(e.target.value);
-    
-    }
+
     const handleLoginClick = (e) => {
         e.preventDefault();
         if(EmailRegex.test(email) && PwdRegex.test(pwd))
@@ -33,14 +24,22 @@ export const Login = () => {
             setPwdError("")
             history.push('/home')
         }
-        if(!PwdRegex.test(email))
+        if(!EmailRegex.test(email))
         {
-        setEmailError("Please Enter Email ID");
+        setEmailError("Please Enter valid Email ID");
         }
-        if(!EmailRegex.test(pwd))
+        if(!PwdRegex.test(pwd))
         {
         setPwdError("Please Enter Valid Password: Atleast 1 Upper Case, 1 Lower Case, 1 Numeric, 1 Special Symbol");
     }
+}
+    const handleEmail = (e) => {
+        e.preventDefault();
+        setEmail(e.target.value);        
+    }
+    const handlePwd = (e) => {
+        e.preventDefault();
+        setPwd(e.target.value);
     }
 
     return (

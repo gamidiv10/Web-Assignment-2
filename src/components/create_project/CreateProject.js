@@ -98,8 +98,8 @@ export const CreateProject = () => {
                 </button>
               </section>
               <section className="form-group">
-                <p className="error">{projectNameError}</p>
-                <p className="error">{projectCodeError}</p>
+                <p className="proj-error">{projectNameError}</p>
+                <p className="proj-error">{projectCodeError}</p>
               </section>
             </form>
           </section>

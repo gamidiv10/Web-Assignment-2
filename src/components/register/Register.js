@@ -36,7 +36,7 @@ export const Register = () => {
         if(EmailRegex.test(email) && PwdRegex.test(pwd)){
             setPwdError("")
             setEmailError("")
-            history.push('/login')
+            history.push('/')
         }
         if(!PwdRegex.test(pwd)){
             setPwdError("Please Enter Valid Password: Atleast 1 Upper Case, 1 Lower Case, 1 Numeric, 1 Special Symbol");
@@ -69,11 +69,11 @@ export const Register = () => {
                             <button className="btn btn-success" type="submit"  onClick={handleSubmit}>Register</button>
                         </section>
                         <section className="form-group">
-                            <a href="/login">Already have an account?</a>
+                            <a href="/">Already have an account?</a>
                         </section>
                         <section className="form-group">
-                            <p className="error">{emailError}</p>
-                            <p className="error">{pwdError}</p>
+                            <p className="reg-error">{emailError}</p>
+                            <p className="reg-error">{pwdError}</p>
                         </section>   
                     </form>
                 </section>

@@ -54,7 +54,7 @@ export const AddUser = () => {
                 </button>
               </section>
               <section className="form-group">
-                <p className="error">{emailError}</p>
+                <p className="user-error">{emailError}</p>
               </section>
             </form>
           </section>

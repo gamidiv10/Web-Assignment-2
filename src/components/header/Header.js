@@ -7,7 +7,7 @@ export const Header = () => {
   const history = useHistory();
   const handleLogin = (e) => {
     e.preventDefault();
-    history.push('/login')
+    history.push('/')
   }
   const handleRegister = (e) => {
     e.preventDefault();

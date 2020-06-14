@@ -82,12 +82,12 @@ export const ResetPassword = () => {
                             <button className="btn btn-success" onClick={handleReset} type="submit">Reset</button>
                         </section>
                         <section className="form-group">
-                            <a href="/login" className="forgot-password" value="reset-pwd">Don't want to Reset? Login</a>
+                            <a href="/" className="forgot-password" value="reset-pwd">Don't want to Reset? Login</a>
                         </section>
                         <section className="form-group">
-                            <p className="error">{emailError}</p>
-                            <p className="error">{pwdError}</p>
-                            <p className="error">{pwdMatchError}</p>
+                            <p className="reset-error">{emailError}</p>
+                            <p className="reset-error">{pwdError}</p>
+                            <p className="reset-error">{pwdMatchError}</p>
                         </section>   
                     </form>
                 </section>

@@ -36,7 +36,7 @@
     color: #fff;
     font-weight: 600;
 }
-.error{
-    color: red;
+.login-error{
+    color: #bd1c37;
     font-weight: 600;
 }

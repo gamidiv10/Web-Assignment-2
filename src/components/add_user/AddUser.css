@@ -33,8 +33,8 @@
     color: #fff;
     font-weight: 600;
 }
-.error{
-    color: maroon;
+.user-error{
+    color: #74230D;
     font-weight: 600;
 }
 .managerDropDown{

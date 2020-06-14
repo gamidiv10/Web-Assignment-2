@@ -67,8 +67,8 @@ export const Login = () => {
                             <a href="/register">Don't have an account?</a>
                         </section>
                         <section className="form-group">
-                            <p className="error">{emailError}</p>
-                            <p className="error">{pwdError}</p>
+                            <p className="login-error">{emailError}</p>
+                            <p className="login-error">{pwdError}</p>
                         </section>                    
                     </form>
                 </section>

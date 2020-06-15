@@ -37,10 +37,10 @@ export const Header = () => {
           <button className="btn btn-dark" onClick={handleRegister}>Register</button>
         </section>
           <section className="form-group">
-          <button className="btn btn-dark login-btn" onClick={handleAbout}>About</button>
+          <button className="btn btn-dark login-btn" onClick={handleAbout} disabled>About</button>
         </section>
         <section className="form-group">
-          <button className="btn btn-dark login-btn" onClick={handleContactUs}>Contact Us</button>
+          <button className="btn btn-dark login-btn" onClick={handleContactUs} disabled>Contact Us</button>
         </section>
 
       </form>

@@ -18,7 +18,7 @@ export const AddUser = () => {
  //Handlers for inputs
   const handleEmail = (e) => {
     e.preventDefault();
-    if (EmailRegex.test(email)) {
+    if (!EmailRegex.test(e.target.value)) {
       setEmailError("Please Enter a valid email");
 
     }
@@ -33,7 +33,7 @@ export const AddUser = () => {
     e.preventDefault();
     if (EmailRegex.test(email)) {
         setEmailError("");
-      history.push("/home");
+      history.push("/people");
     }
     else {
       setEmailError("Please Enter a valid email");

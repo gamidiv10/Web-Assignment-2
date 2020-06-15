@@ -11,7 +11,7 @@
 
 ## Getting Started
 
-### Pages and Functionalities Impemented
+### Pages and Functionalities Implemented
 
 * Login - https://web-assignment2-vg.herokuapp.com/
 * Register - https://web-assignment2-vg.herokuapp.com/register
@@ -82,6 +82,7 @@ App is deployed on heroku by linking github repository. Automatic deploy is enab
 
 ### GitLab Link
 
+https://git.cs.dal.ca/gamidi/a2_vamsi_gamidi
 
 ### Github Link
 
@@ -105,6 +106,20 @@ https://web-assignment2-vg.herokuapp.com/
 * [npm](https://www.npmjs.com/) - Dependency Management.
 
 * [Bootstrap](https://getbootstrap.com/) - Styling Framework.
+
+
+## Design Choices and Justifications
+
+### Front End Frameworks
+
+* React - The applications developed using react are fast, scalable, and simple and allows users to develop reusable components. React uses virtual which makes it even faster. Due to these following reasons, we decided to use React as out front end framework.
+
+* Bootstrap - Bootstrap is the most famous framework for creating user interface. Bootstrap components are also very responsive across devices and is compatible to all browsers. So, i have used bootstrap for developing UI.
+
+* Color Theme - I have used white background with dark contrast UI elements to provide a unique and different User Experience to the user.
+
+* Cards - I have used cards to display projects and users to make it easy for the user to find a specific project and user.
+
 
 ## Sources Used
 

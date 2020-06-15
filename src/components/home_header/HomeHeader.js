@@ -57,19 +57,19 @@ export const HomeHeader = () => {
           <button className="btn btn-dark" onClick={handlePeople}>People</button>
         </section>
         <section className="form-group">
-          <button className="btn btn-dark" onClick={handleCalendar}>Calendar</button>
+          <button className="btn btn-dark" onClick={handleCalendar} disabled>Calendar</button>
         </section>
         <section className="form-group">
-          <button className="btn btn-dark" onClick={handleReports}>Reports</button>
+          <button className="btn btn-dark" onClick={handleReports} disabled>Reports</button>
         </section>
         <section className="form-group">
-          <button className="btn btn-dark" onClick={handleBacklog}>Backlog</button>
+          <button className="btn btn-dark" onClick={handleBacklog} disabled>Backlog</button>
         </section>
           <section className="form-group">
-          <button className="btn btn-dark" onClick={handleAbout}>About</button>
+          <button className="btn btn-dark" onClick={handleAbout} disabled>About</button>
         </section>
         <section className="form-group">
-          <button className="btn btn-dark" onClick={handleContactUs}>Contact Us</button>
+          <button className="btn btn-dark" onClick={handleContactUs} disabled>Contact Us</button>
         </section>
 
       </form>

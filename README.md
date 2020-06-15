@@ -110,8 +110,6 @@ https://web-assignment2-vg.herokuapp.com/
 
 ## Design Choices and Justifications
 
-### Front End Frameworks
-
 * React - The applications developed using react are fast, scalable, and simple and allows users to develop reusable components. React uses virtual which makes it even faster. Due to these following reasons, we decided to use React as out front end framework.
 
 * Bootstrap - Bootstrap is the most famous framework for creating user interface. Bootstrap components are also very responsive across devices and is compatible to all browsers. So, i have used bootstrap for developing UI.

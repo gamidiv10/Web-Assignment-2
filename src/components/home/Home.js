@@ -55,13 +55,13 @@ export const Home = () => {
             <section className="card-body">
         <h5 className="card-title">{project.key}</h5>
         <p className="card-text">{project.manager}</p>
-                <a href="/project" className="stretched-link"> </a>
             </section>
             </section>
             ))}
             <section className="card text-white bg-secondary mb-3">
             <section className="card-body create-card">
                 <h5>Create New Project</h5>
+                <a href="/createProject" className="stretched-link"> </a>
             </section>
             </section>
       </section>

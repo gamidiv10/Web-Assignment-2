@@ -102,6 +102,9 @@ https://web-assignment2-vg.herokuapp.com/
 
 * [Express](https://expressjs.com/): It is a framework for Node.js for the developent of backend, that handles all the interactions between the frontend and database ensuring a smooth tranfer of data to the end user.
 
+* [npm](https://www.npmjs.com/) - Dependency Management.
+
+* [Bootstrap](https://getbootstrap.com/) - Styling Framework.
 
 ## Sources Used
 

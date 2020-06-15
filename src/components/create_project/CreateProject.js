@@ -5,6 +5,7 @@ import { useHistory } from "react-router-dom";
 import {Select} from "@material-ui/core";
 
 export const CreateProject = () => {
+   //Used React Hook for managing state
   const [projectTitle, setProjectName] = useState("");
   const [projectCode, setProjectCode] = useState("");
   const [projectManager, setProjectManager] = useState("Vamsi Gamidi");
@@ -19,12 +20,25 @@ export const CreateProject = () => {
     "Clark Kent",
   ];
   const history = useHistory();
+  //Handlers for inputs
   const handleProjectName = (e) => {
     e.preventDefault();
+    if (e.target.value === "") {
+      setProjectNameError("Project Title Should not be empty");
+    }
+    else{
+      setProjectNameError("")
+    }
     setProjectName(e.target.value);
   };
   const handleProjectCode = (e) => {
     e.preventDefault();
+    if (projectCode === "") {
+      setProjectCodeError("Project Code Should not be empty");
+    }
+    else{
+      setProjectCodeError("")
+    }
     setProjectCode(e.target.value);
   };
   const handleProjectManager = (e) => {
@@ -33,6 +47,7 @@ export const CreateProject = () => {
     console.log(projectManager);
   };
 
+  //Handler for Create Button
   const handleSubmit = (e) => {
     e.preventDefault();
     if (projectCode !== "" && projectTitle !== "") {

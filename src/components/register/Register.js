@@ -4,46 +4,89 @@ import {Header} from '../header/Header'
 import {useHistory} from 'react-router-dom'
 
 export const Register = () => {
+    //Used React Hook to manage state
+    const [firstName, setFirstName] = useState("");
+    const [lastName, setLastName] = useState("");
     const [email, setEmail] = useState("");
     const [pwd, setPwd] = useState("");
     const [emailError, setEmailError] = useState("");
-    const [pwdError, setPwdError] = useState("");    
+    const [pwdError, setPwdError] = useState("");
+    const [firstNameError, setFirstNameError] = useState("");
+    const [lastNameError, setLastNameError] = useState("");
+    //Regular Expressions to validate Email and Password    
     const EmailRegex = 
         RegExp(/^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i);
     const PwdRegex = 
-        new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&*])(?=.{8,})");
+        new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})");
 
     const history = useHistory();
+
+    //Handlers for user input
     const handleFirstName = (e) => {
         e.preventDefault();
+        if(e.target.value === ""){
+            setFirstNameError("First Name Field Should not be Empty");
+        }
+        else{
+            setFirstNameError("")
+        }
         setEmail(e.target.value);        
     }
     const handleLastName = (e) => {
         e.preventDefault();
+        if(e.target.value === ""){
+            setLastNameError("Last Name Field Should not be Empty");
+        }
+        else{
+            setLastNameError("")
+        }
         setPwd(e.target.value);
     
     }
     const handleEmail = (e) => {
         e.preventDefault();
+    if(!EmailRegex.test(e.target.value)){
+        setEmailError("Please Enter Valid Email ID");
+    }
+    else{
+        setEmailError("");
+    }
         setEmail(e.target.value);        
     }
+
     const handlePwd = (e) => {
         e.preventDefault();
+        if(!PwdRegex.test(e.target.value)){
+            setPwdError("Please Enter Valid Password: Atleast 1 Upper Case, 1 Lower Case, 1 Numeric");
+        }
+        else{
+            setPwdError("");
+        }
         setPwd(e.target.value);
     }
+    //Handler for register button click
     const handleSubmit = (e) => {
         e.preventDefault();
         if(EmailRegex.test(email) && PwdRegex.test(pwd)){
             setPwdError("")
+            setFirstName("")
+            setLastName("")
             setEmailError("")
             history.push('/')
         }
         if(!PwdRegex.test(pwd)){
-            setPwdError("Please Enter Valid Password: Atleast 1 Upper Case, 1 Lower Case, 1 Numeric, 1 Special Symbol");
+            setPwdError("Please Enter Valid Password: Atleast 1 Upper Case, 1 Lower Case, 1 Numeric");
         }
         if(!EmailRegex.test(email)){
-            setEmailError("Please Enter Email ID");
+            setEmailError("Please Enter Valid Email ID");
         }
+        if(firstName === ""){
+            setFirstNameError("First Name Field Should not be Empty");
+        }
+        if(lastName === ""){
+            setLastNameError("Last Name Field Should not be Empty");
+        }
+  
     }
     return (
         <section className="register-section">
@@ -74,6 +117,8 @@ export const Register = () => {
                         <section className="form-group">
                             <p className="reg-error">{emailError}</p>
                             <p className="reg-error">{pwdError}</p>
+                            <p className="reg-error">{firstNameError}</p>
+                            <p className="reg-error">{lastNameError}</p>
                         </section>   
                     </form>
                 </section>

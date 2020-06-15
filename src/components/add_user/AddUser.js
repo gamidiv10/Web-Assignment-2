@@ -4,18 +4,31 @@ import { HomeHeader } from "../home_header/HomeHeader";
 import { useHistory } from "react-router-dom";
 
 export const AddUser = () => {
+
+  //Used React Hook for managing state
   const [email, setEmail] = useState("");
   const [emailError, setEmailError] = useState("");
+
+  //Regular Expressions to validate the Email ID and Password
   const EmailRegex = 
   RegExp(/^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i);
+
+  //Using history to navigate to other pages
   const history = useHistory();
- 
+ //Handlers for inputs
   const handleEmail = (e) => {
     e.preventDefault();
+    if (EmailRegex.test(email)) {
+      setEmailError("Please Enter a valid email");
+
+    }
+    else{
+      setEmailError("")
+    }
     setEmail(e.target.value);
   };
 
-
+  //Handler for invite button
   const handleAddUser = (e) => {
     e.preventDefault();
     if (EmailRegex.test(email)) {

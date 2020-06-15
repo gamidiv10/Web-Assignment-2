@@ -3,6 +3,7 @@ import { HomeHeader } from "../home_header/HomeHeader";
 import './Home.css'
 
 export const Home = () => {
+  //Used React Hooks to manage state
     const [projects, setProjects] = useState([]);
     useEffect(() => {
       setProjects([{
@@ -61,7 +62,6 @@ export const Home = () => {
             <section className="card text-white bg-secondary mb-3">
             <section className="card-body create-card">
                 <h5>Create New Project</h5>
-                <a href="/createProject" className="stretched-link"> </a>
             </section>
             </section>
       </section>

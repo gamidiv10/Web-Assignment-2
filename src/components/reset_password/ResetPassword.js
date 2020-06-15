@@ -4,6 +4,7 @@ import {Header} from '../header/Header'
 import {useHistory} from 'react-router-dom'
 
 export const ResetPassword = () => {
+    //Used history to navigate to other pages and used useState() for state management
     const history = useHistory();
     const [email, setEmail] = useState("");
     const [oldPwd, setOldPwd] = useState("");
@@ -13,28 +14,67 @@ export const ResetPassword = () => {
     const [emailError, setEmailError] = useState("");
     const [pwdError, setPwdError] = useState("");
     const [pwdMatchError, setPwdMatchError] = useState("");
+    //Regular Expressions to validate Email and Password
     const EmailRegex = 
         new RegExp(/^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i);
     const PwdRegex = 
-        new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&*])(?=.{8,})");
+        new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})");
 
+        //Handlers for user input
         const handleEmail = (e) => {
             e.preventDefault();
+            if(!EmailRegex.test(e.target.value))
+            {
+            setEmailError("Please Enter Valid Email ID");
+            }
+            else{
+                setEmailError("")
+            }
             setEmail(e.target.value);        
         }
         const handlePwd = (e) => {
             e.preventDefault();
+            if(!PwdRegex.test(e.target.value))
+            {
+                setPwdError("Please Enter Valid Password: Atleast 1 Upper Case, 1 Lower Case, 1 Numeric");
+            }
+            else{
+                setPwdError("")
+            }
             setPwd(e.target.value);
         }
         const handleOldPwd = (e) => {
             e.preventDefault();
+            if(!PwdRegex.test(e.target.value))
+            {
+                setPwdError("Please Enter Valid Password: Atleast 1 Upper Case, 1 Lower Case, 1 Numeric");
+            }
+            else{
+                setPwdError("")
+            }
             setOldPwd(e.target.value);        
         }
         const handleConfirmPwd = (e) => {
             e.preventDefault();
+            if(!PwdRegex.test(e.target.value))
+            {
+                setPwdError("Please Enter Valid Password: Atleast 1 Upper Case, 1 Lower Case, 1 Numeric");
+            }
+            else{
+                setPwdError("")
+            }
+
+            if(pwd !== e.target.value)
+            {
+                setPwdMatchError("Passwords should match");
+            }
+            else{
+                setPwdMatchError("")
+            }
             setConfirmPwd(e.target.value);
         
         }
+        //Handler for reset button
         const handleReset = (e) => {
             e.preventDefault();
             if(EmailRegex.test(email) && PwdRegex.test(pwd) && (pwd === confirmPwd))
@@ -45,11 +85,11 @@ export const ResetPassword = () => {
             }
             if(!EmailRegex.test(email))
             {
-            setEmailError("Please Enter Email ID");
+            setEmailError("Please Enter Valid Email ID");
             }
             if(!(PwdRegex.test(pwd) && PwdRegex.test(oldPwd)))
             {
-                setPwdError("Please Enter Valid Password: Atleast 1 Upper Case, 1 Lower Case, 1 Numeric, 1 Special Symbol");
+                setPwdError("Please Enter Valid Password: Atleast 1 Upper Case, 1 Lower Case, 1 Numeric");
             }
             if(pwd !== confirmPwd)
             {

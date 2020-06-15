@@ -5,6 +5,7 @@ import registerLogo from "../images/11.jpg";
 import deleteLogo from "../images/9.jpg";
 
 export const People = () => {
+  //Used React Hooks for state management
   const [people, setPeople] = useState([]);
   useEffect(() => {
     setPeople([{
@@ -40,6 +41,7 @@ export const People = () => {
     }])
   }, []);
 
+  //Handler for delete user icon
   const handleDeleteUser = (key) => {
     setPeople(people.filter(user => user.key !== key))
   }

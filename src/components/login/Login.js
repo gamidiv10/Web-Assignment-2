@@ -5,17 +5,21 @@ import {useHistory} from 'react-router-dom'
 
 export const Login = () => {
 
+    //Used React Hook to manage state
     const [email, setEmail] = useState("");
     const [pwd, setPwd] = useState("");
     const [emailError, setEmailError] = useState("");
     const [pwdError, setPwdError] = useState("");
+    //Regular Expressions to validate Email and Password
     const EmailRegex = 
         RegExp(/^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i);
     const PwdRegex = 
-        new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&*])(?=.{8,})");
+        new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{6,})");
 
+    //Used history to navigate to other pages
     const history = useHistory();
 
+    //Handler for login button
     const handleLoginClick = (e) => {
         e.preventDefault();
         if(EmailRegex.test(email) && PwdRegex.test(pwd))
@@ -30,16 +34,32 @@ export const Login = () => {
         }
         if(!PwdRegex.test(pwd))
         {
-        setPwdError("Please Enter Valid Password: Atleast 1 Upper Case, 1 Lower Case, 1 Numeric, 1 Special Symbol");
+        setPwdError("Please Enter Valid Password: Atleast 1 Upper Case, 1 Lower Case, 1 Numeric");
     }
 }
+    //Handlers for user input
     const handleEmail = (e) => {
         e.preventDefault();
-        setEmail(e.target.value);        
+        if(!EmailRegex.test(e.target.value))
+        {
+        setEmailError("Please Enter valid Email ID");
+        }
+        else{
+            setEmailError("")
+        }
+        setEmail(e.target.value);  
+
     }
     const handlePwd = (e) => {
         e.preventDefault();
-        setPwd(e.target.value);
+        if(!PwdRegex.test(e.target.value))
+        {
+        setPwdError("Please Enter Valid Password: Atleast 1 Upper Case, 1 Lower Case, 1 Numeric");
+    }
+    else{
+        setPwdError("")
+    }
+    setPwd(e.target.value);
     }
 
     return (

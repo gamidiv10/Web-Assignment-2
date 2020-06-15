@@ -1,10 +1,11 @@
 import React from "react";
 import "./Header.css";
 import {useHistory} from 'react-router-dom';
-// import registerLogo from '../images/10.jpg'
 
 export const Header = () => {
+   //Using history to navigate to other pages
   const history = useHistory();
+  //Handlers for Button Clicks
   const handleLogin = (e) => {
     e.preventDefault();
     history.push('/')

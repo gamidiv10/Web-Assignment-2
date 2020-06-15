@@ -3,7 +3,9 @@ import "./HomeHeader.css";
 import {useHistory} from 'react-router-dom';
 
 export const HomeHeader = () => {
+  //Used history to navigate to other pages
   const history = useHistory();
+  //Handlers for button clicks
   const handleLogin = (e) => {
     e.preventDefault();
     history.push('/')

@@ -11,6 +11,18 @@
 
 ## Getting Started
 
+### Pages and Functionalities Impemented
+
+* Login - https://web-assignment2-vg.herokuapp.com/
+* Register - https://web-assignment2-vg.herokuapp.com/register
+* Reset Password - https://web-assignment2-vg.herokuapp.com/resetPassword
+* Home - https://web-assignment2-vg.herokuapp.com/home
+* Create Project - https://web-assignment2-vg.herokuapp.com/createProject
+* Invite User - https://web-assignment2-vg.herokuapp.com/addUser
+* People - https://web-assignment2-vg.herokuapp.com/people
+
+ 
+
 ### Directory Structure
 
 `src` - source folder contains all of our code
@@ -285,4 +297,8 @@ var strongRegex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\
 
 [1] Delete Icon. [image] Available at: <https://icons8.com/icons/set/delete> [Accessed 13 June 2020].
 
-[2] Background Image. [image] Available at: <https://www.netpremacy.com/google-cloud-premier-partner/background-website-01/> [Accessed 12 June 2020].                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+[2] Background Image. [image] Available at: <https://www.netpremacy.com/google-cloud-premier-partner/background-website-01/> [Accessed 12 June 2020].  
+
+[3] Blank Profile. [Image] Available at: <https://aesusdesign.com/about-us/mans-blank-profile/> [Accessed 13 June 2020].
+
+[4] Blank Profile. [Image] Available at: <https://www.vippng.com/preview/hxiixhw_empty-profile-picture-blank-avatar-image-circle/> [Accessed 13 June 2020].                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
